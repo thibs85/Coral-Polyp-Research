@@ -1,8 +1,8 @@
 macro "Macro 1" {
 	R = 0;
-	while(R < 5){
-		run("Dilate");
-		run("Erode");
+	while(R < 10){
+		run("Dilate", "No");
+		run("Erode", "No");
 		n = 0;
 		b = true;
 		locations_x = newArray(10000);
@@ -66,5 +66,5 @@ macro "Macro 1" {
 		Array.print(locations_y);
 		R++;
 	}
-	run("Make Binary");
+	run("Make Binary", "Ok");
 }
